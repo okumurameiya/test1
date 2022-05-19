@@ -8,6 +8,64 @@
         <meta charset="UTF-8">  <!--文字コード-->
         <title>テスト</title> <!--タイトル-->
         <meta name="description" content="HTML学習用テストページ">  <!--ページ名、説明文等ページ情報-->
+
+        <!--CSS-->
+        <style>
+           @charset "UTF-8";
+           body{
+               background-color: rgb(132, 155, 167);
+               
+            }
+            main{
+                background-color: rgb(110, 130, 140);
+                color:rgb(255, 255, 255);
+                margin:6px 6px 6px 6px;
+                padding:6px 12px 6px 12px;
+            }
+            section{
+                background-color: rgb(187, 202, 216);
+                color:rgb(0, 94, 153);
+                margin:6px 6px 6px 6px;
+                padding:6px 12px 6px 12px;
+            }
+            h2{
+                color:rgb(0, 221, 255);
+                border-width: 0 0 1px 0;
+                border-style: solid;
+            }
+            h1{
+                color:rgb(0, 221, 255);
+                justify-content: center;
+            }
+            h3{
+                color:rgb(144, 240, 255);
+                justify-content: center;
+            }
+            div p{
+                background-color: cadetblue;
+                color:rgb(255, 255, 255); 
+                margin:6px 6px 6px 6px;
+                padding:6px 12px 6px 12px;
+            }
+            
+
+            /*表の幅の比率を固定*/
+            table, th, td {
+                border: 1px solid black;  
+            }
+            table {
+                table-layout: fixed;
+                width: 100%;
+            }
+            
+            th.width30 {
+                width: 30%;
+            }
+            
+            th.width40 {
+                width: 40%;
+            }
+        </style>
     </head>
 
     <!--ブラウザ上に表示される本体部分-->
@@ -18,101 +76,141 @@
         </header>
 
         <main>
-            <h1>h1テキスト</h1>    <!--見出し(heading)：サイズ1～6-->
-            <h6>h6テキスト</h6>
-            テキスト<br>
-            brタグ改行
-            <p>
-                pタグ改行
-            </p>
-            <img src="../images/testimage_1.png" alt="--説明文--"> <!--src:ファイルパス（相対パス/絶対パス)-->
-
-            <!--imgタグをaタグで囲うと画像にリンクが貼れる-->
-            <a href="../images/testimage_1.png">
-                <img src="../images/testimage_1.png" alt="--説明文--">
-            </a>
-            <br>
-                <a href="about.html">ページリンク</a>    <!--ページリンク：-->
-            <br>
-            
-            <h3>箇条書きリスト</h3>
-            <ul>    <!--Unorderd list-->
-                <li>リストアイテム</li>
-                <li>リストアイテム</li>
-                <li>リストアイテム</li>
-            </ul>
-
-            <h3>番号付きリスト</h3>
-            <ol>    <!--Orderd list-->
-                <li>リストアイテム</li>
-                <li>リストアイテム</li>
-                <li>リストアイテム</li>
-            </ol>
-
-            <h3>表</h3>
             <table border="1">
-                <!--table row: 行数-->
-                <tr>            
-                    <!--table header: 列数-->
-                    <th colspan="2">表</th> <!--colspan属性：指定した値の数のセルを横に結合(右方向)-->
+                <tr>                <!--タイトル-->
+                  
+                    <th>
+                        ブラウザー表示
+                    </th>
+                    <th>
+                        HTML
+                    </th>
                 </tr>           
                 <tr>
-                    <td rowspan="2">1</td>  <!--rowspan属性：指定した値の数のセルを縦に結合(下方向)-->
-                    <td>1-1</td>
+                    <!--HTML2行目-->
+                    <!--ブラウザ2行目-->
+                    <td>
+                        <h2>文章</h2>
+                        <h6>h6テキスト</h6>
+                        テキスト<br>
+                        brタグ改行
+                        <p>
+                            pタグ改行
+                        </p>
+
+                        <div>
+                            <p>
+                                ウィキペディアは百科事典を作成するプロジェクトです。その記事に執筆者独自の意見や研究内容が含まれてはならず（Wikipedia:独自研究は載せないを参照）、その記事の内容は、信頼できる文献を参照することによって検証可能でなければなりません（Wikipedia:検証可能性を参照）。したがって、記事の執筆者は、複数の信頼できる検証可能な文献を参照し、その内容に即して記事を執筆することが要求されます。一方で、参考文献に掲載されている文章をそのまま引き写すことは、剽窃（盗作）であり、場合によっては著作権の侵害という法律上の問題も生じることから、各執筆者は、独自の表現で記事を執筆しなければなりません。
+                            </p>
+                        </div>
+                        <br>
+                            <a href="about.html">ページリンク</a>    <!--ページリンク：-->
+                        <br>
+                    </td>
+                    <td>
+                        1-2
+                    </td>
                 </tr>
                 <tr>
-                    <td>1-2</td>   
+                    <td>
+
+                        <h3>表</h3>
+                        <table border="1">
+                            <!--table row: 行数-->
+                            <tr>            
+                                <!--table header: 列数-->
+                                <th colspan="2">表</th> <!--colspan属性：指定した値の数のセルを横に結合(右方向)-->
+                            </tr>           
+                            <tr>
+                                <td rowspan="2">1</td>  <!--rowspan属性：指定した値の数のセルを縦に結合(下方向)-->
+                                <td>1-1</td>
+                            </tr>
+                            <tr>
+                                <td>1-2</td>   
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>2-1</td>
+                            </tr>
+                        </table>
+                    </td>   
+                    <td>2-2</td>   
                 </tr>
                 <tr>
-                    <td>2</td>
-                    <td>2-1</td>
+                    <td>
+                        <img src="testimage_1.png" alt="--説明文--"> <!--src:ファイルパス（相対パス/絶対パス)-->
+
+                        <!--imgタグをaタグで囲うと画像にリンクが貼れる-->
+                        <a href="testimage_1.png">
+                            <img src="testimage_1.png" alt="--説明文--">
+                        </a>
+                    </td>
+                    <td>3-2</td>
+                </tr>
+                <tr>
+                    <td>
+                        <h2>リスト</h2>
+                            <h3>箇条書きリスト</h3>
+                            <ul>    <!--Unorderd list-->
+                                <li>リストアイテム</li>
+                                <li>リストアイテム</li>
+                                <li>リストアイテム</li>
+                            </ul>
+
+                            <h3>番号付きリスト</h3>
+                            <ol>    <!--Orderd list-->
+                                <li>リストアイテム</li>
+                                <li>リストアイテム</li>
+                                <li>リストアイテム</li>
+                            </ol>
+                    </td>
+                    <td>4-2</td>
+                </tr>
+                <tr>
+                    <td>
+                        <h2>フォーム</h2>
+                            <form avtion="example.php" method="post" name="contact-form"> <!--データ送信先、送信方法、フォーム名称を設定-->
+                                <!--inputタグ　type属性値-->
+                
+                                ラジオボタン
+                                <input type="radio" name="number" value="0" checked>0   <!--checked属性(値なし)でデフォルト選択-->
+                                <input type="radio" name="number" value="1">1
+                                <input type="radio" name="number" value="その他">その他
+                                <br>
+                
+                                チェックボックス
+                                <input type="checkbox" name="color" value="赤" checked>赤
+                                <input type="checkbox" name="color" value="青" >青
+                                <input type="checkbox" name="color" value="緑" >緑
+                                <br>
+                
+                                <!--inputタグでidを設定、labelタグfor属性でテキストに関連付け-->
+                                <input type="checkbox" name="color" value="赤" id="red"><label for="red">labelタグでチェックボックスとテキストを関連付け</label>
+                                <br>
+                
+                                セレクトボックス
+                                <select name="bloodtype">
+                                    <option value="A">A</option>
+                                    <option value="B">B</option>
+                                    <option value="O">O</option>
+                                    <option value="AB">AB</option>
+                                    <option value="不明">不明</option>
+                                </select>
+                                <br>
+                
+                                <!--1行入力: text, search, email, tel, url-->
+                                <input type="text" placeholder="テキスト入力">
+                                <br>
+                
+                                <textarea name="message" placeholder="テキスト入力"></textarea>
+                                <br>
+                                <input type="submit" value="送信">
+                            </form>
+                    </td>
+                    <td>5-2</td>
                 </tr>
             </table>
         </main>
-        
-        <section>   <!--1つのテーマを持ったグループ-->
-            <h3>フォーム</h3>
-            <form avtion="example.php" method="post" name="contact-form"> <!--データ送信先、送信方法、フォーム名称を設定-->
-                <!--inputタグ　type属性値-->
-                
-
-                ラジオボタン
-                <input type="radio" name="number" value="0" checked>0   <!--checked属性(値なし)でデフォルト選択-->
-                <input type="radio" name="number" value="1">1
-                <input type="radio" name="number" value="その他">その他
-                <br>
-
-                チェックボックス
-                <input type="checkbox" name="color" value="赤" checked>赤
-                <input type="checkbox" name="color" value="青" >青
-                <input type="checkbox" name="color" value="緑" >緑
-                <br>
-
-                <!--inputタグでidを設定、labelタグfor属性でテキストに関連付け-->
-                <input type="checkbox" name="color" value="赤" id="red"><label for="red">labelタグでチェックボックスとテキストを関連付け</label>
-                <br>
-
-                セレクトボックス
-                <select name="bloodtype">
-                    <option value="A">A</option>
-                    <option value="B">B</option>
-                    <option value="O">O</option>
-                    <option value="AB">AB</option>
-                    <option value="不明">不明</option>
-                </select>
-                <br>
-
-                <!--1行入力: text, search, email, tel, url-->
-                <input type="text" placeholder="テキスト入力">
-                <br>
-
-                <textarea name="message" placeholder="テキスト入力"></textarea>
-                <br>
-
-                送信ボタン
-                <input type="submit" value="送信">
-            </form>
-        </section>
 
         <footer>
             e-mail:<a href="mailto:okumura@for-a.co.jp">okumura@for-a.co.jp</a>    <!--メールアドレスのリンク-->
