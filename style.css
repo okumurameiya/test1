@@ -1,0 +1,98 @@
+
+
+@charset "UTF-8";
+:root {
+    --base-color-1: rgb(69, 78, 84);
+    --base-color-2: rgb(76, 86, 92);
+    --main-color-1: rgb(238, 246, 255);
+    --main-color-2: rgb(128, 255, 0);
+    --accent-color: rgb(255, 0, 119);
+}
+
+body{
+    background-color: var(--base-color-1);
+    color: var(--main-color-1);
+    
+}
+main{
+    background-color: var(--base-color-1);
+    color:var(--main-color-1)
+    width: auto;
+    padding:6px 12px 6px 12px;
+}
+
+h1, h2{
+    color:var(--main-color-2);
+    mix-blend-mode:normal;
+}
+h2{
+    border-width: 0 0 1px 0;
+    border-style: solid;
+}
+h3{
+    color: var(--main-color-1);
+    justify-content: center;
+}
+div.docs{
+    border: 1px solid var(--main-color-1);
+    border-radius: 10px;
+    margin:6px 6px 6px 6px;
+    padding:6px 12px 6px 12px;
+}
+a{
+    color:var(--accent-color);
+    mix-blend-mode:normal;
+    text-decoration: none;
+}
+.container1{
+    display: flex;
+    flex-wrap: wrap;
+
+    /*display: grid;
+    grid-template-columns: 1fr 1fr 1fr;*/
+}
+.c1-item{
+    background-color: var(--base-color-2);
+    border-radius: 30px;
+    /*border: 1px solid var(--main-color-1);*/
+
+    width: 45%;
+    height: auto;
+
+    margin:6px 6px 6px 6px;
+    padding:12px 18px 12px 18px;
+}
+
+img{
+    width: 100%;
+    border-radius: 10px;
+}
+/*表の幅の比率を固定*/
+table, th, td {
+    border: 1px solid var(--main-color-1);
+    border-radius: 30px;
+
+}
+table {
+    border-collapse: collapse;
+    table-layout: fixed;
+    width: 30%;
+}
+th.width30 {
+    width: 30%;
+}
+/*リスト*/
+ul{
+    list-style-type:circle;
+    padding-right: 18px;
+}
+ol{
+    list-style-type:lower-alpha;
+    padding-right: 18px;
+}
+.docs{
+    list-style-position: outside;
+}
+footer{
+    border-top: 1px solid var(--main-color-2);
+}
